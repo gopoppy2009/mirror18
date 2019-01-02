@@ -1,0 +1,231 @@
+@charset="UTF-8";
+
+
+/*common*/
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.sr-only {
+    position: absolute;
+    left: -9999px;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+
+/*layout*/
+#wrap {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    position: fixed;
+    width: 8%;
+    height: 100%;
+}
+
+#container {
+    position: absolute;
+    left: 8%;
+    width: 900%;
+    height: 100%;
+    background-color: #ff0;
+}
+
+
+
+header {
+    background-color: #f7f7f7;
+    z-index: 100;
+    animation: right 2.0s;
+}
+
+header .header_pos {
+    position: relative;
+    width: 1%;
+    height: 100%;
+    margin: 0 auto;
+    /*  border: 1px solid red;*/
+}
+
+header .header_pos .scroll {
+    position: absolute;
+    top: 15%;
+    left: -46px;
+    color: #959595;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    font-weight: 200;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+}
+
+header .header_pos .menu_btn {
+    position: absolute;
+    top: 48%;
+    margin-left: -15px;
+    padding: 5px;
+}
+
+header .header_pos .menu_btn .menu_line {
+    display: block;
+    width: 20px;
+    height: 1px;
+    margin-bottom: 4px;
+    background-color: #333;
+}
+
+header .header_pos .menu_btn .closed:first-child {
+    transform: translateY(5px) rotate(-45deg)
+}
+
+header .header_pos .menu_btn .closed:nth-child(2) {
+    transform: scaleX(0) translateZ(0)
+}
+
+header .header_pos .menu_btn .closed:nth-child(3) {
+    transform: translateY(-5px) rotate(45deg)
+}
+
+header .header_pos .request {
+    position: absolute;
+    bottom: 15%;
+    left: -53px;
+    color: #959595;
+    font-size: 13px;
+    font-weight: 200;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    /*    border: 1px solid red;*/
+}
+
+
+
+#container section {
+    position: relative;
+    float: left;
+    width: 10%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid red;
+}
+
+#container .section_1 {
+    left: 1%;
+}
+
+#container .section_1 h1 {
+    position: absolute;
+    top: 32%;
+    width: 14.5%;
+    height: 4%;
+    text-indent: -9999px;
+    background-image: url(../img/brontide-logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 1px solid red;
+    animation: left 2.0s;
+}
+
+#container .section_1 p {
+    position: absolute;
+    top: 40%;
+    width: 40%;
+    height: 10%;
+    color: #c6b29a;
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(15px + 13 * (100vw - 320px) / 1600);
+    line-height: calc(25px + 25 * (100vw - 320px) / 1600);
+    border: 1px solid red;
+    animation: left 2.5s;
+}
+
+#container .section_1 .video_btn {
+    position: relative;
+    top: 65%;
+    padding-left: 40px;
+    font-size: 15px;
+    border: 1px solid red;
+    animation: left 3.0s;
+}
+
+#container .section_1 .video_btn:after,
+#container .section_1 .video_btn:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 1px;
+    background: #000;
+}
+
+#container .section_1 .video_btn:before {
+    transform-origin: 0 0;
+    transition: transform .3s cubic-bezier(.215, .61, .355, 1) .2s;
+}
+
+#container .section_1 .video_btn:after {
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+    transition: transform .3s cubic-bezier(.215, .61, .355, 1);
+}
+
+#container .section_1 .video_btn:hover:before {
+    transform: scaleX(0);
+    transform-origin: 100% 100%;
+    transition: transform .3s cubic-bezier(.215, .61, .355, 1)
+}
+
+#container .section_1 .video_btn:hover:after {
+    transform: scaleX(1);
+    transform-origin: 0 0;
+    transition: transform .3s cubic-bezier(.215, .61, .355, 1) .2s;
+}
+
+#container .section_1 img{
+    position: absolute;
+    width: 20%;
+    height: 50%;
+}
+
+
+/*animation*/
+@keyframes right {
+    from {
+        transform: translateX(-100%) translateZ(0);
+    }
+    to {
+        transform: translateX(0) translateZ(0);
+    }
+}
+
+@keyframes left {
+    from {
+        opacity: 0;
+        transform: translateX(100%) translateZ(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) translateZ(0);
+    }
+}

@@ -1,0 +1,153 @@
+@charset "utf-8";
+/************************************************************************
+* filename : base.css
+* description : 공통 css
+************************************************************************/
+
+*, *:after, *:before {-webkit-box-sizing:border-box; box-sizing:border-box;}
+html, body {-webkit-font-smoothing:antialiased; -webkit-text-size-adjust:none; text-size-adjust:none;}
+html {overflow-y:scroll}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, textarea, p, blockquote, table, th, td, input, select, textarea, button {margin:0; padding:0}
+body, input, textarea, select, button, table {color:#222; font-size:18px; font-family:'HyundaiSansTextKRRegular', 'Malgun Gothic', Dotum, AppleGothicNeoSD, Gulim, '굴림', arial, sans-serif; line-height:28px}
+em {font-style:normal}
+fieldset, img {border:0 none}
+img  {vertical-align:middle}
+dl, ul, ol, menu, li {list-style:none}
+input::-ms-clear {display:none}
+button {border:0 none; border-radius:0; background-color:transparent; cursor:pointer}
+a {color:inherit; text-decoration:none}
+a:hover,
+a:focus,
+a:active {background-color:transparent; text-decoration:underline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+
+.blind {position:absolute; top:-9999em}
+.clearfix{*zoom:1;}
+.clearfix:after{display:block;clear:both;content:"";}
+.sr_only{display:inline-block;position:absolute;z-index:-10;width:0 !important;height:0 !important;overflow:hidden !important;font-size:medium;line-height:normal;word-break:break-all;}
+
+/* skip navigation */
+#skipnavi a {position:absolute; top:-9999px; background:#35719E; color:#fff; text-align:center; z-index:9999}
+#skipnavi a:hover, #skipnavi a:focus {display:block; top:0; width:100%; padding:5px 0}
+
+/* layout */
+#wrap {max-width:1920px;margin:0 auto;}
+#header{position:relative;border:1px solid transparent;}
+#container{position:relative;width:100%;margin-top:130px;transition:all .5s}
+#container section{opacity:0;position:relative;width:100%;height:550px;background-repeat:no-repeat;background-size:cover;text-align:center;transform:rotateX(45deg);}
+#container section .img_box{opacity:0;transform:translateY(-200%);}
+#container section.scroll-show{opacity:1;transform:rotateX(0);transition:all 2s;}
+#container section.scroll-show .img_box{opacity:1;transform:translateY(0%);transition:all 1s;}
+#footer{position:relative;width:100%;background-color:#35719E;}
+.more{position:relative;}
+.more:before,.more:after{display:block;content:"";position:absolute;top:0;left:0;z-index:-10;width:100%;height:100%;transform-origin:100%;transform:scaleX(0);transition:transform .3s;}
+.more:before{background-color:#000;}
+.more:after{background-color:#35719E;}
+.more:hover,.more:focus{color:#fff;}
+.more:hover:before,.more:focus:before{transform-origin:0;transform:scaleX(1);transition:transform .1s;}
+.more:hover:after,.more:focus:after{transform-origin:0;transform:scaleX(1);transition:transform .6s;}
+
+#header .util_menu {position:absolute;top:0;left:0;z-index:30;width:100%;height:40px;background-color:#35719E;color:#fff;font-size:calc(9px + 10*(100vw - 320px)/1600);transition:all .5s;}
+#header .util_menu .list{position:absolute;top:7px;right:3%;}
+#header .util_menu .list .item{position:relative;float:left;padding-right:30px;}
+#header .util_menu .list .item .depth2_menu{display:none;position:absolute;width:130px;padding:30px;background-color:#35719E;}
+#header .util_menu .list .item .depth2_menu li+li{margin-top:10px;}
+
+#header .gnb_area {position:absolute;top:40px;width:100%;height:90px;transition:all .5s;}
+#header .gnb_area h1 a{position:absolute;top:50%;left:3%;width:200px;height:30px;background-image:url(../img/logo.svg);background-repeat:no-repeat;background-size:contain;text-indent:-9999px;transform:translateY(-50%);}
+#header .gnb_area .depth1_wrap{position:absolute;top:30px;left:28%;}
+#header .gnb_area .depth1_wrap .depth1_list{position:relative;float:left;padding:0 23px;}
+#header .gnb_area .depth1_wrap .depth1_list .depth1_link{display:block;font-family:'HyundaiSansHeadKRBold';font-size:calc(10px + 10*(100vw - 320px)/1600);font-weight:800;text-decoration:none;-ms-transition:color 0.5s ease;-o-transition:color 0.5s ease;-moz-transition:color 0.5s ease; -webkit-transition:color 0.5s ease;transition:color 0.5s ease;}
+#header .gnb_area .depth1_wrap .depth1_list .depth1_link:hover,
+#header .gnb_area .depth1_wrap .depth1_list .depth1_link:focus{color:#35719E;}
+#header .gnb_area .go_network{display:none;}
+#header .gnb_area .all_menu a{position:absolute;top:50%;right:7%;width:7%;height:30px;transform:translate(0, -50%);}
+#header .gnb_area .all_menu a:before{content:'';position:absolute;left:0;top:0;width:100%;height:4px;background:#35719E;transition: all 0.3s;}
+#header .gnb_area .all_menu a span{position:absolute;left:0;top:50%;width:100%;height:4px;background:#35719E;transform:translate(0, -50%);overflow:hidden;text-indent: -999px;}
+#header .gnb_area .all_menu a:after {content:'';position:absolute;left:0;bottom:0;width:100%;height:4px;background:#35719E;}
+
+#container #main-visual{overflow:hidden;position:relative;width:100%;height:580px;}
+#container #main-visual ul.slide{position:absolute;width:100%;height:100%;}
+#container #main-visual ul.slide li{position:absolute;top:0;left:0;width:100%;height:100%;}
+#container #main-visual ul.slide li h2{position:absolute;top:15%;left:12%;font-size:calc(35px + 10*(100vw - 320px)/1600);font-weight:800;}
+#container #main-visual ul.slide li p{position:absolute;top:25%;left:12%;font-size:calc(12px + 10*(100vw - 320px)/1600);}
+#container #main-visual ul.slide li a{display:block;position:absolute;top:35%;left:12%;width:18%;height:8%;border:2px solid black;font-size:calc(12px + 10*(100vw - 320px)/1600);font-weight:800;line-height:2.2;text-align:center;text-decoration:none;transition:all .5s;}
+#container #main-visual ul.slide li.new_car{background-image:url(../img/new-car-main-keyvisual.jpg);background-size:cover;}
+#container #main-visual ul.slide li.xcient_space{background-image:url(../img/xcient-space-main-keyvisual.jpg);background-size:cover;}
+#container #main-visual ul.slide li.xcient{background-image:url(../img/xcient-main-keyvisual.jpg);background-size:cover;}
+#container #main-visual ul.slide li.on h2,#container #main-visual ul.slide li.on p,#container #main-visual ul.slide li.on a{animation:visual-show 2s ease 0s 1 normal forwards;}
+#container #main-visual p.control a.prev {position:absolute;top:50%;left:10px;margin-top:-40px;padding:5px;background-color:#4a555e;}
+#container #main-visual p.control a.next {position:absolute;top:50%;right:10px;margin-top:-40px;padding:5px;background-color:#4a555e;}
+#container #main-visual p.control a.prev:hover,#container #main-visual p.control a.next:hover{background-color:#35719E;}
+#container #main-visual p.control a.play {position:absolute;right:40px;bottom:15px;color:#fff;font-size:18px;text-shadow:1px 1px 3px rgba(0, 0, 0, 0.5);}
+#container #main-visual p.control a.play i.fa-pause {display: none;}
+#container #main-visual p.control a.play i.fa-play {display: inline-block;}
+#container #main-visual p.control a.play.on i.fa-pause {display: inline-block;}
+#container #main-visual p.control a.play.on i.fa-play {display: none;}
+
+#container section .txt_box h2{color:#35719E;font-size:42px;letter-spacing:20px;line-height:46px;transition:all .5s;}
+#container section .txt_box p{padding-top:34px;font-size:18px;line-height:28px;transition:all .5s;}
+#container section .txt_box a{display:inline-block;width:30%;height:10%;margin-top:50px;border:2px solid #000;font-size:calc(12px + 10*(100vw - 320px)/1600);font-weight:800;line-height:2.2em;text-align:center;text-decoration:none;transition:all .5s;}
+
+#container section .img_box{position:absolute;top:10%;left:12%;z-index:10;text-align:left;transition:all .5s;}
+#container section .img_box h2{font-size:calc(35px + 10*(100vw - 320px)/1600);font-weight:800;transition:all .5s;}
+#container section .img_box p{margin-top:5%;;font-size:calc(12px + 10*(100vw - 320px)/1600);transition:all .5s;}
+#container section .img_box a{position:absolute;top:150%;width:300px;height:50px;border:2px solid #000;font-size:calc(12px + 10*(100vw - 320px)/1600);font-weight:800;line-height:50px;text-align:center;text-decoration:none;transition:all .5s;}
+#container section .img_box a .fas fa-angle-right{display:none;}
+
+#container #sec_01{height:400px;padding:80px 0;}
+#container #sec_02{background-image:url(../img/catalog-main.jpg)}
+#container #sec_03{background-image:url(../img/sales-network-main.jpg)}
+#container #sec_04{background-image:url(../img/mighty-main.jpg)}
+#container #sec_05{background-image:url(../img/cvmembership-main.jpg)}
+#container #sec_06{background-image:url(../img/service-network-main.jpg);color:#fff;}
+#container #sec_06 .img_box a{border:2px solid #fff;}
+#container #sec_07{background-image:url(../img/hyundai-trucknbus-service-app-main.jpg);color:#fff;}
+#container #sec_07 .img_box h2{line-height:1.2;}
+#container #sec_07 .img_box a{border:2px solid #fff;}
+
+#footer .location_wrap{position:relative;width:100%;height:80px;padding:0 12%;background-color:#fff;}
+#footer .location_wrap a{font-family:'HyundaiSansHeadKRBold';font-size:calc(15px + 10*(100vw - 320px)/1600);font-weight:800;text-decoration:none;-ms-transition:color 0.5s ease;-o-transition:color 0.5s ease;-moz-transition:color 0.5s ease; -webkit-transition:color 0.5s ease;transition:color 0.5s ease;}
+#footer .location_wrap a:hover,#footer .location_wrap a:focus{color:#35719E;}
+#footer .location_wrap .home{position:absolute;top:50%;transform:translateY(-50%)}
+#footer .location_wrap .page{position:absolute;top:50%;right:10%;transform:translateY(-50%)}
+
+#footer .seomenu_wrap{padding:5% 12%;color:#fff;}
+#footer .seomenu_wrap .menu_list_wrap > li{width:15%;float:left;}
+#footer .seomenu_wrap .menu_list_wrap > li + li{margin-left:2%;}
+#footer .seomenu_wrap .menu_list_wrap > li h2 a{color:#fff;width:100%;height:100%;font-size:calc(18px + 10*(100vw - 320px)/1600);font-weight:800;text-decoration:none;cursor:default;}
+#footer .seomenu_wrap .menu_list_wrap > li h2 .fa-chevron-down{display:none;}
+#footer .seomenu_wrap .menu_list_wrap > li .menu_list > li{margin-top:5%;font-size:calc(8px + 6*(100vw - 320px)/1600);}
+#footer .seomenu_wrap .menu_list_wrap > li .menu_list > li:first-child{margin-top:15%;}
+
+#footer .footer_wrap{padding:0 12%;padding-bottom:30px;color:#fff;border-bottom:1px solid #bfd5e3;;}
+#footer .footer_wrap .logo a{float:left;width:130px;height:25px;background-image:url(../img/footer_logo.svg);background-repeat:no-repeat;background-size:contain;}
+#footer .footer_wrap .footer_menu{margin-left:30%;font-size:calc(8px + 10*(100vw - 320px)/1600);}
+#footer .footer_wrap .footer_menu > p{display:inline-block;float:left;padding-right:3%;}
+#footer .footer_wrap .footer_menu .menu_list li{float:left;padding-right:5%;}
+#footer .footer_wrap .footer_menu .copyright{color:#bfd5e3;}
+
+#footer .winner{padding:2% 12%;color:#bfd5e3;;}
+#footer .winner ul li{float:left;position:relative;font-size:calc(8px + 8*(100vw - 320px)/1600);line-height:1.5;}
+#footer .winner ul li span{position:absolute;top:-5px;left:-40px;background-image:url(../img/ico_footer_m.svg);background-repeat:no-repeat;background-size:cover;}
+#footer .winner ul li.family span{width:35px;height:30px;}
+#footer .winner ul li.KS span{width:35px;height:30px;background-position:-85px 2px;}
+#footer .winner ul li.WA span{left:-45px;width:40px;height:30px;background-position:-180px;}
+#footer .winner ul li:first-child{margin-left:3%;}
+#footer .winner ul li + li{margin-left:20%;}
+
+/*animation*/
+@keyframes visual-show {
+    0% {opacity:0;transform:translateX(100%);}
+    100% {opacity:1;transform:translateX(0);}
+}
+@keyframes visual-hide {
+    0% {opacity: 1; transform: rotate(0) scale(1);}
+    100% {opacity: 0; transform: rotate(-3deg) scale(1.2);}
+}
+
+/*color guide*/
+/*
+#35719E (main)
+#4a555e (grey)
+*/
