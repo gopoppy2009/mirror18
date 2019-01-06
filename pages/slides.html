@@ -19,7 +19,8 @@
 
     <!-- Custom CSS -->
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="../dist/css/normalize.css" rel="stylesheet">
+    <link href="../dist/css/eric_meyer.css" rel="stylesheet">
+    <link href="../dist/css/mirror.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -103,13 +104,19 @@
                             <div class="slides1">
                                 <ul class="clearfix">
                                     <li>
-                                        <div class="table_cell w3-animate-top">&quot;Hello, World!&quot;</div>
+                                        <div class="table_cell w3-animate-top">
+                                            <p>&quot;Hello, World!&quot;</p>
+                                        </div>
                                     </li>
                                     <li>
-                                        <div class="table_cell">&quot;Hello, World!&quot;</div>
+                                        <div class="table_cell">
+                                            <p>&quot;Hello, World!&quot;</p>
+                                        </div>
                                     </li>
                                     <li>
-                                        <div class="table_cell">&quot;Hello, World!&quot;</div>
+                                        <div class="table_cell">
+                                            <p>&quot;Hello, World!&quot;</p>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -145,6 +152,25 @@
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
 
+    <script>
+        //slides1
+        var nowIdx = 0;
+        var width = $(".slides1 > ul > li").width();
+        setInterval(function () {
+            if (nowIdx > 2) {
+                nowIdx = 0;
+            } else {
+                nowIdx++;
+            }
+            console.log(nowIdx)
+            $(".slides1 > ul > li >.table_cell>p").removeClass("w3-animate-top");
+
+            $(".slides1 > ul").animate({
+                left: -nowIdx * width
+            }, 1000).children('li').eq(nowIdx).find("p").addClass("w3-animate-top");
+
+        }, 4000);
+    </script>
 </body>
 
 </html>

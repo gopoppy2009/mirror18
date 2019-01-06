@@ -432,65 +432,10 @@ table.dataTable thead .sorting:after {
     border-left-width: 0;
   }
 }
-
-/* mirror */
 /* bootstrap.css */
 .panel-body img{
   width: 100%;
 }
 .list-group{
   margin: 0;
-}
-
-/* common */
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:after{
-  display: block;
-  clear: both;
-  content: "";
-}
-
-/*slides1*/
-.slides1 {
-  /* overflow: hidden; */
-  position: relative;
-  height: 200px;
-  border-radius: 20px;
-}
-.slides1 > ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  border: 1px solid red;
-}
-.slides1 > ul > li {
-  display: table;
-  float: left;
-  width: 30%;
-  height: 200px;
-  border-radius: 20px;
-}
-.slides1 > ul > li:nth-child(1) {
-  background-color: #ffb339;
-}
-.slides1 > ul > li:nth-child(2) {
-  background-color: #f36d64;
-}
-.slides1 > ul > li:nth-child(3) {
-  background-color: #43b3cb;
-}
-.slides1 > ul > li .table_cell {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-}
-.slides1 > ul > li h2,
-.slides1 > ul > li p {
-  color: #fff;
-}
-.slides1 > ul > li h2 {
-  font-size: 80px;
 }
