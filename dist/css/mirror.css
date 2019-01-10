@@ -27,7 +27,6 @@
   float: left;
   width: 33.33%;
   height: 200px;
-  border-radius: 20px;
 }
 .slides1 > ul > li:nth-child(1) {
   background-color: #ffb339;
@@ -47,6 +46,110 @@
   color: #fff;
 }
 
+/*slides2*/
+.slides2 {
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+  border-radius: 20px;
+}
+.slides2 > ul {
+  width: 300%;
+}
+.slides2 > ul > li {
+  display: table;
+  float: left;
+  width: 33.33%;
+  height: 200px;
+}
+.slides2 > ul > li:nth-child(1) {
+  background-color: #ffb339;
+}
+.slides2 > ul > li:nth-child(2) {
+  background-color: #f36d64;
+}
+.slides2 > ul > li:nth-child(3) {
+  background-color: #43b3cb;
+}
+.slides2 > ul > li .table_cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.slides2 > ul > li .table_cell p{
+  color: #fff;
+}
+
+/*slides3*/
+.slides-pagination {
+  position: relative;
+  margin: 30px 0 0 70px;
+}
+.slides-pagination > li {
+  float: left;
+  margin-right: 25px;
+}
+.slides-pagination > li:last-child {
+  margin: 0;
+}
+.slides-pagination > li > a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: all .2s;
+}
+.slides-pagination > li:nth-child(1) > a {
+  background-color: #ffb339;
+}
+.slides-pagination > li:nth-child(2) > a {
+  background-color: #f36d64;
+}
+.slides-pagination > li:nth-child(3) > a {
+  background-color: #43b3cb;
+}
+.slides-pagination > li.on > a {
+  width: 50px;
+}
+.slides3 {
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+  border-radius: 20px;
+}
+.slides3 > ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+}
+.slides3 > ul > li {
+  display: table;
+  position: absolute;
+  width: 33.33%;
+  height: 200px;
+}
+.slides3 > ul > li.a {
+  background-color: #ffb339;
+  z-index: 100;
+}
+.slides3 > ul > li.b {
+  background-color: #f36d64;
+}
+.slides3 > ul > li.c {
+  background-color: #43b3cb;
+}
+.slides3 > ul > li .table_cell {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+.slides3 > ul > li .table_cell p{
+  color: #fff;
+}
+
 /*animation*/
 .w3-animate-top {
   position: relative;
@@ -60,5 +163,16 @@
   to {
       top: 0;
       opacity: 1
+  }
+}
+.w3-animate-zoom {
+  animation: animatezoom 2.0s
+}
+@keyframes animatezoom {
+  from {
+      transform: scale(0)
+  }
+  to {
+      transform: scale(1)
   }
 }

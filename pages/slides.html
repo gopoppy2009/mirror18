@@ -98,6 +98,66 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="panel panel-default">
+                        <div class="panel-heading">Slide03</div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="slides3">
+                                <ul class="clearfix">
+                                    <li class="a" style="left: 100%; z-index: 200;">
+                                        <div class="table_cell w3-animate-btm">
+                                            <p>&quot;Hello, World!&quot;</p>
+                                        </div>
+                                    </li>
+                                    <li class="b" style="left: 100%; z-index: 200;">
+                                        <div class="table_cell w3-animate-btm">
+                                            <p>&quot;Hello, World!&quot;</p>
+                                        </div>
+                                    </li>
+                                    <li class="c" style="left: 0px; z-index: 200;">
+                                        <div class="table_cell w3-animate-btm">
+                                            <p>&quot;Hello, World!&quot;</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Slide02</div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="slides2">
+                                <ul class="clearfix">
+                                    <li>
+                                        <div class="table_cell w3-animate-zoom">
+                                            <p>&quot;Hello, World!&quot;</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="table_cell">
+                                            <p>&quot;Hello, World!&quot;</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="table_cell">
+                                            <p>&quot;Hello, World!&quot;</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <div class="panel panel-default">
                         <div class="panel-heading">Slide01</div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -151,25 +211,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="../dist/js/mirror.js"></script>
 
     <script>
-        //slides1
-        var nowIdx = 0;
-        var width = $(".slides1 > ul > li").width();
-        setInterval(function () {
-            if (nowIdx > 1) {
-                nowIdx = 0;
-            } else {
-                nowIdx++;
-            }
-            console.log(nowIdx)
-            $(".slides1 > ul > li >.table_cell>p").removeClass("w3-animate-top");
-
-            $(".slides1 > ul").animate({
-                left: -nowIdx * width
-            }, 1000).children('li').eq(nowIdx).find("p").addClass("w3-animate-top");
-
-        }, 4000);
     </script>
 </body>
 
