@@ -13,7 +13,6 @@ setInterval(function () {
     }, 1000).children('li').eq(nowIdx).find("p").addClass("w3-animate-top");
 }, 4000);
 
-
 //slides2
 var nowIdx2 = 0;
 setInterval(function () {
@@ -126,14 +125,14 @@ $indicator.on("click", function (evt) {
 });
 
 
-// 2019-01-17 slide04
+// slide4
 var Banners = (function() {
-    var root = $('.banners');
-    var item = $('.banners__item');
-    var indicator = $('.banners__indicator');
-    var idx = 0;
-    var timer;
-    var interval = 4000;
+    var root = $('.banners'),
+        item = $('.banners__item'),
+        indicator = $('.banners__indicator'),
+        idx = 0,
+        timer,
+        interval = 4000;
 
     (function init() {
         play();
@@ -156,7 +155,7 @@ var Banners = (function() {
 
     function onFocusin() {
         stop();
-    }
+    }               
 
     function onFocusout() {
         play();
@@ -171,7 +170,7 @@ var Banners = (function() {
     }
 
     function next() {
-        if(idx < item.length) {
+        if(idx < item.length - 1) {
             idx++
         } else {
             idx = 0;
@@ -187,6 +186,7 @@ var Banners = (function() {
     }
 
     function draw() {
+        console.log('draw' + idx);
         item.eq(idx).addClass('-active').siblings().removeClass('-active');
         indicator.eq(idx).addClass('-active').siblings().removeClass('-active');
     }
