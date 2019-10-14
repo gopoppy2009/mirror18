@@ -126,10 +126,10 @@ $indicator.on("click", function (evt) {
 
 
 // slide4
-var Banners = (function() {
-    var root = $('.banners'),
-        item = $('.banners__item'),
-        indicator = $('.banners__indicator'),
+var slides4 = (function() {
+    var root = $('.slides4'),
+        item = $('.slides4__item'),
+        indicator = $('.slides4__indicator'),
         idx = 0,
         timer,
         interval = 4000;
@@ -140,9 +140,9 @@ var Banners = (function() {
     })();
 
     function addEvent() {
-        root.on('click', '.banners__indicator', onClick);
-        root.on('focusin', '.banners__indicator, .banners__button', onFocusin);
-        root.on('focusout', '.banners__indicator, .banners__button', onFocusout);
+        root.on('click', '.slides4__indicator', onClick);
+        root.on('focusin', '.slides4__indicator, .slides4__button', onFocusin);
+        root.on('focusout', '.slides4__indicator, .slides4__button', onFocusout);
     }
 
     function onClick(e) {

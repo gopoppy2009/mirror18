@@ -197,15 +197,15 @@
 }
 
 
-/* =Banners */
-.banners {
+/* =slides4 */
+.slides4 {
   position: relative;
 }
-.banners__list {
+.slides4__list {
   position: relative;
   height: 200px;
 }
-.banners__item {
+.slides4__item {
   visibility: hidden;
   opacity: 0;
   position: absolute;
@@ -215,30 +215,30 @@
   border-radius: 20px;
   transition: all 1s;
 }
-.banners__item.-active {
+.slides4__item.-active {
   visibility: visible;
   opacity: 1;
 }
-.banners__text {
+.slides4__text {
   display: table;
   width: 100%;
   height: 200px;
 }
-.banners__align {
+.slides4__align {
   position: relative;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
-.banners__main {
+.slides4__main {
   color: #fff;
 }
-.banners__sub {
+.slides4__sub {
   margin-bottom: 10px;
   color: #fff;
   font-size: 20px;
 }
-.banners__indicators {
+.slides4__indicators {
   position: absolute;
   top: 70px;
   z-index: 10;
@@ -246,10 +246,10 @@
   line-height: 0;
   text-align: center;
 }
-.banners__indicator + .banners__indicator {
+.slides4__indicator + .slides4__indicator {
   margin-left: 5px;
 }
-.banners__indicator {
+.slides4__indicator {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
@@ -260,7 +260,7 @@
   cursor: pointer;
   transition: width .4s;
 }
-.banners__indicator.-active {
+.slides4__indicator.-active {
   width: 37px;
   border-bottom: 2px solid #d33570;
 }
